@@ -3,10 +3,11 @@ import type { NextConfig } from "next";
 const isGithubActions = process.env.GITHUB_ACTIONS === "true" || process.env.GITHUB_ACTIONS === "1";
 let basePath: string | undefined = undefined;
 
-if (process.env.NEXT_PUBLIC_BASE_PATH !== undefined) {
-  basePath = process.env.NEXT_PUBLIC_BASE_PATH || undefined;
+if (process.env.NEXT_PUBLIC_BASE_PATH !== undefined && process.env.NEXT_PUBLIC_BASE_PATH !== "") {
+  basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 } else if (isGithubActions) {
-  basePath = "/meu-site";
+  const repoName = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split("/")[1] : "site-evento";
+  basePath = `/${repoName}`;
 }
 
 const nextConfig: NextConfig = {
