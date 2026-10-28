@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #b58342;
+    --gold-light: #dfbe83;
+    --gold-dark: #8c6227;
+    --sand-bg: #fbf9f5;
+    --sand-card: #f5f0e8;
+    --luxury-dark: #171513;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: #24211d;
+    background-color: #fbf9f5;
+  }
+}
+
+/* Custom subtle luxury styling */
+.serif-display {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.sans-body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Gold foil gradient texts */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8a5e24 0%, #b88646 50%, #dfbe83 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #b88646 0%, #a07035 100%);
+}
+
+.gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #c79654 0%, #b07e3f 100%);
+}
+
+/* Luxury button style as seen in images */
+.btn-luxe {
+  background: #a37237;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.85rem 2.25rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px 0 rgba(163, 114, 55, 0.28);
+}
+
+.btn-luxe:hover {
+  background: #8b5e28;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(163, 114, 55, 0.38);
+}
+
+.btn-luxe-outline {
+  background: transparent;
+  color: #171513;
+  border: 1px solid #171513;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.8rem 2.2rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-luxe-outline:hover {
+  background: #171513;
+  color: #ffffff;
+}
+
+/* Subtle image overlay effect */
+.img-luxe-frame {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-luxe-frame img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.img-luxe-frame:hover img {
+  transform: scale(1.04);
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfbeaa;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a37237;
+}
