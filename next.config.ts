@@ -1,13 +1,12 @@
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true" || process.env.GITHUB_ACTIONS === "1";
+const isDev = process.env.NODE_ENV === "development";
 let basePath: string | undefined = undefined;
 
 if (process.env.NEXT_PUBLIC_BASE_PATH !== undefined && process.env.NEXT_PUBLIC_BASE_PATH !== "") {
   basePath = process.env.NEXT_PUBLIC_BASE_PATH;
-} else if (isGithubActions) {
-  const repoName = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split("/")[1] : "site-evento";
-  basePath = `/${repoName}`;
+} else if (!isDev) {
+  basePath = "/site-evento";
 }
 
 const nextConfig: NextConfig = {
