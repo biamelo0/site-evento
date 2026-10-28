@@ -17,12 +17,12 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "LUXE & CO. | Alta Gastronomia & Catering Exclusivo para Eventos",
-  description: "Catering de alto padrão, jantares privativos, casamentos elegantes, eventos corporativos e experiências culinárias sob medida com o Chef Executivo.",
-  keywords: ["catering de luxo", "eventos exclusivos", "alta gastronomia", "chef table", "casamentos de luxo", "jantar harmonizado"],
+  title: "Celebre & Encante | Buffet Completo, Decoração & Eventos Inesquecíveis",
+  description: "Buffet completo, salgadinhos fritos na hora, doces finos, churrasco, bar de drinks e decoração para aniversários, casamentos e confraternizações.",
+  keywords: ["buffet para festas", "organização de eventos", "festa de aniversário", "buffet completo", "salgadinhos para festa", "decoração de festas"],
   openGraph: {
-    title: "LUXE & CO. | Alta Gastronomia & Catering Exclusivo",
-    description: "Criamos momentos inesquecíveis através da sofisticação e da alta gastronomia.",
+    title: "Celebre & Encante | Buffet Completo, Decoração & Eventos Inesquecíveis",
+    description: "A celebração dos seus sonhos com fartura, sabor e total tranquilidade.",
     type: "website",
   },
 };
